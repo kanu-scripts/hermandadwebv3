@@ -51,3 +51,19 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+// <!-- JavaScript for Success Message -->
+document.getElementById('newsletterForm').addEventListener('submit', function (event) {
+  event.preventDefault(); 
+
+  
+  const successMessage = document.querySelector('.success-message');
+  successMessage.style.display = 'block'; 
+
+
+  this.reset();
+
+setTimeout(() => {
+  successMessage.style.display = 'none';
+}, 5000);
+});
