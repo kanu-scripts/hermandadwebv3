@@ -51,3 +51,18 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+document.getElementById('newsletterForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Simulate successful form submission
+  const successMessage = document.querySelector('.success-message');
+  successMessage.style.display = 'block'; // Show the success message
+
+  // Clear the input field
+  this.reset();
+// Hide the success message after 5 seconds
+setTimeout(() => {
+  successMessage.style.display = 'none';
+}, 5000);
+});
